@@ -9,7 +9,11 @@ const characters = ['Rick', 'Morty', 'Summer', 'Beth', 'Jerry'];
 
 characters.sort();
 
-// outcome?
+###
+outcome?
+["Beth", "Jerry", "Morty", "Rick", "Summer"]
+###
+
 ```
 
 ---
@@ -20,6 +24,12 @@ This method will sort the array items by their `unicode` numbers.
 let letter = 'A';
 console.log(letter.charCodeAt(0))
 ```
+
+###
+
+Upper case comes befor lower case.
+
+###
 
 ---
 
@@ -36,12 +46,17 @@ const numbers = [123, 13, 12, 6, 76, 0, 9];
 
 numbers.sort();
 
-// outcome?
+###
+outcome?
+[ 0, 12, 123, 13, 6, 76, 9 ]
+###
 ```
 
 ---
 
 ## Solution: Define out own sorting function!
+
+We can define our own sorting
 
 ---
 
@@ -55,9 +70,29 @@ numbers.sort();
 ```js
 const numbers = [123, 13, 12, 6, 76, 0, 9];
 
-numbers.sort((a, b) => {
-  // Write code here!
+numbers.sort(function(a, b) => {
+if (a > b)
+return 1;
+} else {
+  return -1
+}
 });
 
-// outcome?
+###
+names = ['Zachary', 'betty']
+
+names.sort(function(a,b) {
+  let lowercaseA = a.toLowerCase();
+  let lowercaseB = b.toLowerCase();
+
+  if (lowercaseA > lowercaseB) {
+    return 1;
+    } else {
+      return -1;
+    }
+})
+###
+
+outcome?
+['betty', 'Zachary']
 ```
